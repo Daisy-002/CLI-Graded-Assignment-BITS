@@ -1,0 +1,26 @@
+Directory Structure:
+ProjectWorkspace:
+backup
+docs
+src
+
+ProjectWorkspace/backup:
+
+ProjectWorkspace/docs:
+
+ProjectWorkspace/src:
+
+Permissions Before Modification:
+-rw-rw-r-- 1 daisy daisy 30 Jul  3 22:25 ProjectWorkspace/docs/project_plan.txt
+
+Permissions After Modification:
+-rw------- 1 daisy daisy 30 Jul  3 22:25 ProjectWorkspace/docs/project_plan.txt
+
+Ownership Details:
+-rw------- 1 daisy daisy 30 Jul  3 22:25 ProjectWorkspace/docs/project_plan.txt
+
+Umask Value:
+0002
+
+Explanation:
+The file permissions were modified to allow only the owner to read and write the file. Restricting permissions prevents unauthorized users from accessing or modifying sensitive project files, thereby improving the security of the project workspace.

@@ -1,0 +1,44 @@
+Inode Numbers:
+total 12
+131559 -rw-rw-r-- 2 daisy daisy 31 Jul  3 22:43 hardlink.txt
+131557 -rw-rw-r-- 1 daisy daisy 15 Jul  3 22:44 Link_Analysis_Report.txt
+131559 -rw-rw-r-- 2 daisy daisy 31 Jul  3 22:43 original.txt
+131558 -rw-rw-r-- 1 daisy daisy  0 Jul  3 22:43 README.md
+131560 lrwxrwxrwx 1 daisy daisy 12 Jul  3 22:43 symlink.txt -> original.txt
+
+Comparison:
+Hard links share the same inode number as the original file and point directly to the file data.
+Symbolic links have a different inode number and point to the filename instead of the actual data.
+
+Metadata:
+  File: original.txt
+  Size: 31        	Blocks: 8          IO Block: 4096   regular file
+Device: 8,17	Inode: 131559      Links: 2
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/daisy)   Gid: ( 1000/daisy)
+Access: 2026-07-03 22:43:31.269283573 +0000
+Modify: 2026-07-03 22:43:31.269283573 +0000
+Change: 2026-07-03 22:43:46.000593571 +0000
+ Birth: 2026-07-03 22:43:31.269283573 +0000
+  File: hardlink.txt
+  Size: 31        	Blocks: 8          IO Block: 4096   regular file
+Device: 8,17	Inode: 131559      Links: 2
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/daisy)   Gid: ( 1000/daisy)
+Access: 2026-07-03 22:43:31.269283573 +0000
+Modify: 2026-07-03 22:43:31.269283573 +0000
+Change: 2026-07-03 22:43:46.000593571 +0000
+ Birth: 2026-07-03 22:43:31.269283573 +0000
+  File: symlink.txt -> original.txt
+  Size: 12        	Blocks: 0          IO Block: 4096   symbolic link
+Device: 8,17	Inode: 131560      Links: 1
+Access: (0777/lrwxrwxrwx)  Uid: ( 1000/daisy)   Gid: ( 1000/daisy)
+Access: 2026-07-03 22:43:56.603536450 +0000
+Modify: 2026-07-03 22:43:56.603536450 +0000
+Change: 2026-07-03 22:43:56.603536450 +0000
+ Birth: 2026-07-03 22:43:56.603536450 +0000
+
+Effect of Deleting Original File:
+The hard link continued to work normally because it shares the same inode as the original file.
+The symbolic link became broken because it only stores the pathname of the original file.
+
+Conclusion:
+Hard links remain functional after deleting the original file, whereas symbolic links become invalid if the target file is removed.

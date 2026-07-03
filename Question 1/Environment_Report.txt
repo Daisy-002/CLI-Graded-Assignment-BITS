@@ -1,0 +1,30 @@
+Username: daisy
+Groups: daisy adm sudo docker
+Shell: /bin/bash
+Current Directory: /home/daisy/Question1
+Files and Directories:
+
+total 12
+drwxrwxr-x  2 daisy daisy 4096 Jul  3 22:10 .
+drwxr-x--- 10 daisy daisy 4096 Jul  3 22:05 ..
+-rw-rw-r--  1 daisy daisy  152 Jul  3 22:12 Environment_Report.txt
+
+Network Connectivity:
+
+PING google.com (142.250.193.78) 56(84) bytes of data.
+64 bytes from bom12s12-in-f14.1e100.net (142.250.193.78): icmp_seq=1 ttl=115 time=4.12 ms
+64 bytes from bom12s12-in-f14.1e100.net (142.250.193.78): icmp_seq=2 ttl=115 time=3.98 ms
+64 bytes from bom12s12-in-f14.1e100.net (142.250.193.78): icmp_seq=3 ttl=115 time=4.05 ms
+64 bytes from bom12s12-in-f14.1e100.net (142.250.193.78): icmp_seq=4 ttl=115 time=4.11 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+rtt min/avg/max/mdev = 3.98/4.07/4.12/0.05 ms
+
+Updated Files and Directories:
+
+total 16
+drwxrwxr-x  2 daisy daisy 4096 Jul  3 22:20 .
+drwxr-x--- 10 daisy daisy 4096 Jul  3 22:05 ..
+-rw-rw-r--  1 daisy daisy  977 Jul  3 22:21 Environment_Report.txt
+-rw-rw-r--  1 daisy daisy 2683 Jul  3 22:20 README.md

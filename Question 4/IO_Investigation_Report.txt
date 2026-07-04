@@ -1,0 +1,39 @@
+Open File Descriptors:
+total 0
+lrwx------ 1 daisy daisy 64 Jul  3 22:35 0 -> /dev/pts/2
+lrwx------ 1 daisy daisy 64 Jul  3 22:35 1 -> /dev/pts/2
+lrwx------ 1 daisy daisy 64 Jul  3 22:35 2 -> /dev/pts/2
+lrwx------ 1 daisy daisy 64 Jul  3 22:35 255 -> /dev/pts/2
+
+File Descriptor Observation:
+Data was written to Environment_Report.txt using standard output redirection.
+
+Output Redirection:
+Environment_Report.txt
+README.md
+screenshots
+
+Error Redirection:
+ls: cannot access 'non_existing_file': No such file or directory
+
+Resource Limits:
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) unlimited
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 31541
+max locked memory           (kbytes, -l) 8192
+max memory size             (kbytes, -m) unlimited
+open files                          (-n) 1024
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) 8192
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) unlimited
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
+
+Explanation:
+Linux manages file I/O using file descriptors. Standard input (0), standard output (1), and standard error (2) are automatically assigned to every process. Output redirection stores command output into files, while error redirection captures error messages separately. Resource limits help prevent excessive system resource usage by processes.

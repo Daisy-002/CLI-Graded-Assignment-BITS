@@ -1,0 +1,68 @@
+Storage Assessment Report
+
+Available Storage Devices:
+NAME      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda         8:0    0  100G  0 disk 
+├─sda1      8:1    0 95.8G  0 part /run/google/devshell
+│                                /var/lib/docker
+│                                /etc/ssh/keys
+│                                /var/config/tmux
+│                                /etc/resolv.conf
+│                                /etc/hostname
+│                                /etc/hosts
+│                                /root
+├─sda2      8:2    0   16M  0 part 
+├─sda3      8:3    0    2G  0 part 
+├─sda4      8:4    0   16M  0 part 
+├─sda5      8:5    0    2G  0 part 
+├─sda6      8:6    0  512B  0 part 
+├─sda7      8:7    0  512B  0 part 
+├─sda8      8:8    0   16M  0 part 
+├─sda9      8:9    0  512B  0 part 
+├─sda10     8:10   0  512B  0 part 
+├─sda11     8:11   0    8M  0 part 
+└─sda12     8:12   0   32M  0 part 
+sdb         8:16   0    5G  0 disk 
+└─sdb1      8:17   0    5G  0 part /home
+
+Mounted File Systems:
+overlay on / type overlay (rw,relatime,lowerdir=213/fs:212/fs:211/fs:208/fs:207/fs:204/fs:203/fs:200/fs:198/fs:197/fs:196/fs:192/fs:190/fs:188/fs:186/fs:184/fs:182/fs:181/fs:180/fs:179/fs:178/fs:177/fs:176/fs:172/fs:166/fs:164/fs:163/fs:159/fs:158/fs:155/fs:153/fs:146/fs:145/fs:141/fs:140/fs:139/fs:136/fs:135/fs:132/fs:131/fs:129/fs:127/fs:125/fs:122/fs:121/fs:111/fs:110/fs:109/fs:108/fs:106/fs:105/fs:104/fs:103/fs:102/fs:97/fs:96/fs:95/fs:94/fs:93/fs:90/fs:88/fs:84/fs:83/fs:82/fs:80/fs:78/fs:77/fs:76/fs:73/fs:71/fs:69/fs:67/fs:65/fs:63/fs:6/fs,upperdir=/var/lib/containerd/io.containerd.snapshotter.v1.gcfs/snapshotter/snapshots/311/fs,workdir=/var/lib/containerd/io.containerd.snapshotter.v1.gcfs/snapshotter/snapshots/311/work)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev type tmpfs (rw,nosuid,size=65536k,mode=755)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=666)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+sysfs on /sys type sysfs (ro,nosuid,nodev,noexec,relatime)
+cgroup on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime)
+/dev/sda1 on /root type ext4 (rw,relatime,commit=30)
+/dev/disk/by-id/google-home-part1 on /home type ext4 (rw,noatime,journal_checksum,errors=remount-ro,data=ordered)
+/dev/sda1 on /etc/hosts type ext4 (rw,relatime,commit=30)
+/dev/sda1 on /etc/hostname type ext4 (rw,relatime,commit=30)
+/dev/sda1 on /etc/resolv.conf type ext4 (rw,relatime,commit=30)
+shm on /dev/shm type tmpfs (rw,relatime,size=65536k)
+/dev/sda1 on /var/config/tmux type ext4 (ro,relatime,commit=30)
+/dev/sda1 on /etc/ssh/keys type ext4 (rw,relatime,commit=30)
+/dev/sda1 on /var/lib/docker type ext4 (rw,relatime,commit=30)
+/dev/sda1 on /run/google/devshell type ext4 (rw,relatime,commit=30)
+none on /sys/kernel/security type securityfs (rw,relatime)
+
+Disk Usage Statistics:
+Filesystem                         Size  Used Avail Use% Mounted on
+overlay                             95G   71G   24G  76% /
+tmpfs                               64M     0   64M   0% /dev
+/dev/sda1                           95G   71G   24G  76% /root
+/dev/disk/by-id/google-home-part1  4.8G  162M  4.4G   4% /home
+shm                                 64M     0   64M   0% /dev/shm
+
+Inode Utilization:
+Filesystem                         Inodes   IUsed   IFree IUse% Mounted on
+overlay                           6258720 1347372 4911348   22% /
+tmpfs                             1017262     169 1017093    1% /dev
+/dev/sda1                         6258720 1347372 4911348   22% /root
+/dev/disk/by-id/google-home-part1  327680     690  326990    1% /home
+shm                               1017262       1 1017261    1% /dev/shm
+
+Storage Health Observations:
+The mounted file systems are accessible and operational. Disk usage is within normal limits, and inode utilization indicates sufficient capacity for creating additional files.
+
+Recommendations:
+Regularly monitor disk usage and inode consumption, remove unnecessary files, archive old data, and perform routine backups to maintain storage health.
